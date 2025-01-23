@@ -25,7 +25,7 @@
 Add Otpify to your project using Swift Package Manager:
 
 1. In Xcode, go to `File > Add Packages...`.
-2. Enter the repository URL: `https://github.com/your-username/Otpify.git`.
+2. Enter the repository URL: `https://github.com/mehmetfarhan/Otpify.git`.
 3. Select the version you want to use.
 4. Click `Add Package`.
 
