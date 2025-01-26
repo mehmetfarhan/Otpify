@@ -26,6 +26,9 @@ struct ContentView: View {
                 displayType: .underlinedBottom,
                 onComplete: { otp in
                     self.otp = otp
+                },
+                onTextChange: { newOTP in
+                    self.otp = newOTP
                 }
             )
             .padding()

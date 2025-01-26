@@ -16,17 +16,20 @@ public struct OtpifyView: View {
     var style: OtpifyStyle
     var displayType: DisplayType
     var onComplete: (String) -> Void // Completion handler
+    var onTextChange: (String) -> Void // Text change handler
     
     public init(
         otpLength: Int = 4,
         style: OtpifyStyle = OtpifyStyle(),
         displayType: DisplayType = .roundedCorner,
-        onComplete: @escaping (String) -> Void = { _ in } // Default empty handler
+        onComplete: @escaping (String) -> Void = { _ in }, // Default empty handler
+        onTextChange: @escaping (String) -> Void = { _ in } // Default empty handler
     ) {
         self._otpFields = State(initialValue: Array(repeating: "", count: otpLength))
         self.style = style
         self.displayType = displayType
         self.onComplete = onComplete
+        self.onTextChange = onTextChange
     }
     
     public var body: some View {
@@ -35,8 +38,9 @@ public struct OtpifyView: View {
                 OtpifyField(
                     text: $otpFields[index],
                     isFocused: focusedField == index,
-                    onTextChange: { _, isForward in
+                    onTextChange: { newText, isForward in
                         handleTextChange(fieldIndex: index, isForward: isForward)
+                        onTextChange(otpFields.joined())
                     },
                     style: style,
                     displayType: displayType
