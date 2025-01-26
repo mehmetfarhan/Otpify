@@ -18,6 +18,15 @@
 
 ---
 
+## Screenshots
+
+<p align="center">
+  <img src="Screenshots/Image1.png" width="30%" />
+  <img src="Screenshots/Image2.png" width="30%" />
+</p>
+
+---
+
 ## Installation
 
 ### Swift Package Manager

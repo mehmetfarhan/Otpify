@@ -37,11 +37,6 @@ If you find a bug or have a feature request, please open an issue on GitHub. Inc
 
 ---
 
-## Code of Conduct
-Please note that this project is released with a [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you agree to abide by its terms.
-
----
-
 ## Questions?
 If you have any questions or need help, feel free to reach out by opening an issue or contacting the maintainer.
 
